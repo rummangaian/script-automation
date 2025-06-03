@@ -1,5 +1,6 @@
 const axiosInstance = require('../config/axiosInstance');
 const generateSchemaPayload = require('../utils/generateSchemaPayload');
+const createPayload = require("../utils/attributePayload")
 
 let schemaStore = {};
 
@@ -43,3 +44,10 @@ exports.createSchemas = async (req, res) => {
     res.status(500).json({ message: 'Unexpected error.', error: error.message });
   }
 };
+
+exports.createSchemaPayload = async (req , res) => {
+  const {universeID} = req.query;
+  const attributeJson = req.body;
+  const schemaPayload = createPayload(universeID ,attributeJson)
+  res.status(200).json(schemaPayload)
+}
