@@ -1,8 +1,9 @@
 const express = require('express');
-const { createSchemas } = require('../controllers/schemaController');
+const { createSchemas , createSchemaPayload } = require('../controllers/schemaController');
 
 const router = express.Router();
 
-router.post('/createSchemas', createSchemas);
+router.post('/create-schemas', createSchemas);
+router.post('/schema-payload' , createSchemaPayload)
 
 module.exports = router;

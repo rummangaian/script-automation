@@ -1,5 +1,7 @@
 const axios = require("axios");
 const metadATA = require("./data/figmaList.json");
+const { figmaPAT } = require("../constant");
+const {pushInstanceToSchema} = require("../services/pi.js")
 
 const getFigmaNodeData = async (fileKey, nodeId, token) => {
   try {
@@ -19,15 +21,18 @@ const getFigmaNodeData = async (fileKey, nodeId, token) => {
   }
 };
 
-const getData = async (children) => {
+const getData = async (metaData) => {
   const result = [];
 
-  for (let i = 0; i < children.length; i++) {
+  for (let z = 0; z < metaData.length; z++) {
+    const data = metaData[z].children;
+    for (let y = 0; y < data.length; y++) {
+    const children = data[y].children;
+    for (let i = 0; i < children.length; i++) {
     const child = children[i];
     const res = await getFigmaNodeData(
       "0Jq8LmC7SRzHSyclV4P0C6",
-      child.id,
-      process.env.FIGMA_TOKEN
+      child.id,figmaPAT
     );
     if (!res) continue;
 
@@ -48,15 +53,40 @@ const getData = async (children) => {
       },
       styles: res.nodes[nodeId].styles
     };
-    result.push(payload);
+
+    const response = await pushInstanceToSchema("682ffe9bf42f855ab22b3182" , payload)
+    console.log(response.msg , " for copo id ", nodeId)
+    result.push(nodeId);
+  }
+  }
   }
 
+  
+
+  
+  console.log(result.length , " figma compoenent have been fetched successfully ")
   return result;
 };
 
+const getFigmaFile = async(compId)=> {
+  try {
+    const url = `https://api.figma.com/v1/files/0Jq8LmC7SRzHSyclV4P0C6/nodes?ids=${compId}`
+    const headers = {"X-Figma-Token":figmaPAT}
+    const res = await axios.get(url,{
+      headers
+    })
+    return res.data
+  } catch (error) {
+    console.log("error" , error)
+  }
+}
+
 const figmaPayload = async (id) => {
   try {
-    const children = metadATA.nodes[id].document.children;
+    const metadATA = await getFigmaFile(id);
+    // return metadATA.nodes[id].document.children
+    const children = metadATA.nodes[id.replace(/-/g, ':')].document.children;
+    // // return children
     const res = await getData(children);
     return res;
   } catch (error) {
