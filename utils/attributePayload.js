@@ -75,7 +75,6 @@ const generateAttributeListPayload = (obj) => {
 
 const createPayload = (universeID , attributeJson) => {
     const attributeList = generateAttributeListPayload(attributeJson);
-    console.log(attributeList)
     let res = sample;
     res.universes = [universeID];
     res.attributes = attributeList;
