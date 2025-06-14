@@ -1,5 +1,5 @@
 const axios = require("axios");
-const metadATA = require("./data/figmaList.json");
+// const metadATA = require("./data/figmaList.json");
 const { figmaPAT } = require("../constant");
 const {pushInstanceToSchema} = require("../services/pi.js")
 
