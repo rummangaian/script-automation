@@ -24,10 +24,10 @@ const getFigmaNodeData = async (fileKey, nodeId, token) => {
 const getData = async (metaData) => {
   const result = [];
 
-  for (let z = 0; z < metaData.length; z++) {
-    const data = metaData[z].children;
-    for (let y = 0; y < data.length; y++) {
-    const children = data[y].children;
+  // for (let z = 0; z < metaData.length; z++) {
+  //   const data = metaData[z].children;
+    for (let y = 0; y < metaData.length; y++) {
+    const children = metaData[y].children;
     for (let i = 0; i < children.length; i++) {
     const child = children[i];
     const res = await getFigmaNodeData(
@@ -59,7 +59,7 @@ const getData = async (metaData) => {
     result.push(nodeId);
   }
   }
-  }
+  // }
 
   
 
@@ -86,12 +86,12 @@ const figmaPayload = async (id) => {
     const metadATA = await getFigmaFile(id);
     // return metadATA.nodes[id].document.children
     const children = metadATA.nodes[id.replace(/-/g, ':')].document.children;
-    // // return children
+    // return children
     const res = await getData(children);
     return res;
   } catch (error) {
     console.error('Failed to retrieve Figma payload:', error);
-    return null;
+    return null;1439-20997
   }
 };
 

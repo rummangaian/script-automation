@@ -1,508 +1,4877 @@
 {
-  "attributeJson": {
-    "title": {
-      "id": "string",
-      "show": "boolean",
-      "text": "string",
-      "link": "string",
-      "target": "string",
-      "textStyle": "json",
-      "subtext": "string",
-      "sublink": "string",
-      "subtarget": "string",
-      "subtextStyle": "json",
-      "textAlign": "string",
-      "textVerticalAlign": "string",
-      "triggerEvent": "boolean",
-      "padding": "number",
-      "itemGap": "number",
-      "zlevel": "number",
-      "z": "number",
-      "left": "string",
-      "top": "string",
-      "right": "string",
-      "bottom": "string",
-      "backgroundColor": "string",
-      "borderColor": "string",
-      "borderWidth": "number",
-      "borderRadius": "number",
-      "shadowBlur": "number",
-      "shadowColor": "string",
-      "shadowOffsetX": "number",
-      "shadowOffsetY": "number"
+    "name": "SCHEMA for saving the options of the dashlets in DbaaS Universe",
+    "description": "SCHEMA for saving the options of the dashlets in DbaaS Universe",
+    "schemaReadAccess": "PUBLIC",
+    "dataReadAccess": "PUBLIC",
+    "dataWriteAccess": "PUBLIC",
+    "metadataReadAccess": "PUBLIC",
+    "metadataWriteAccess": "PUBLIC",
+    "universes": [
+        "683983ada1619d1a4a824693"
+    ],
+    "tags": {
+        "BLUE": [
+            "SCHEMA"
+        ]
     },
-    "legend": {
-      "id": "string",
-      "show": "boolean",
-      "z": "number",
-      "zlevel": "number",
-      "left": "string",
-      "top": "string",
-      "right": "string",
-      "bottom": "string",
-      "width": "string",
-      "height": "string",
-      "orient": "string",
-      "align": "string",
-      "padding": "number",
-      "itemGap": "number",
-      "itemWidth": "number",
-      "itemHeight": "number",
-      "symbolKeepAspect": "boolean",
-      "formatter": "longText",
-      "selectedMode": "boolean",
-      "inactiveColor": "string",
-      "selected": "json",
-      "textStyle": {
-        "color": "string",
-        "fontStyle": "string",
-        "fontWeight": "string | number",
-        "fontFamily": "string",
-        "fontSize": "number",
-        "lineHeight": "number",
-        "width": "number",
-        "height": "number",
-        "textBorderColor": "string",
-        "textBorderWidth": "number",
-        "textShadowColor": "string",
-        "textShadowBlur": "number",
-        "textShadowOffsetX": "number",
-        "textShadowOffsetY": "number",
-        "overflow": "string",
-        "ellipsis": "string"
-      },
-      "tooltip": "json",
-      "backgroundColor": "string",
-      "borderColor": "string",
-      "borderWidth": "number",
-      "borderRadius": "number",
-      "shadowBlur": "number",
-      "shadowColor": "string",
-      "shadowOffsetX": "number",
-      "shadowOffsetY": "number",
-      "scrollDataIndex": "number",
-      "pageButtonItemGap": "number",
-      "pageButtonGap": "number",
-      "pageButtonPosition": "string",
-      "pageFormatter": "string",
-      "pageIcons": "json",
-      "pageIconColor": "string",
-      "pageIconInactiveColor": "string",
-      "pageIconSize": "number",
-      "pageTextStyle": "json",
-      "animation": "boolean",
-      "animationDurationUpdate": "number",
-      "selector": "boolean",
-      "selectorPosition": "string",
-      "selectorItemGap": "number",
-      "selectorButtonGap": "number",
-      "selectorLabel": "json",
-      "data": "array"
+    "primaryKey": [
+        "id"
+    ],
+    "attributes": [
+        {
+            "name": "unique-id",
+            "nestedName": "unique-id",
+            "type": {
+                "type": "string"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false
+        },
+        {
+            "name": "title",
+            "nestedName": "title",
+            "type": {
+                "type": "object"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false,
+            "children": [
+                {
+                    "name": "id",
+                    "nestedName": "id",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "show",
+                    "nestedName": "show",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "text",
+                    "nestedName": "text",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "link",
+                    "nestedName": "link",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "target",
+                    "nestedName": "target",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "textStyle",
+                    "nestedName": "textStyle",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "subtext",
+                    "nestedName": "subtext",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "sublink",
+                    "nestedName": "sublink",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "subtarget",
+                    "nestedName": "subtarget",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "subtextStyle",
+                    "nestedName": "subtextStyle",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "textAlign",
+                    "nestedName": "textAlign",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "textVerticalAlign",
+                    "nestedName": "textVerticalAlign",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "triggerEvent",
+                    "nestedName": "triggerEvent",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "padding",
+                    "nestedName": "padding",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "itemGap",
+                    "nestedName": "itemGap",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "zlevel",
+                    "nestedName": "zlevel",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "z",
+                    "nestedName": "z",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "left",
+                    "nestedName": "left",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "top",
+                    "nestedName": "top",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "right",
+                    "nestedName": "right",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "bottom",
+                    "nestedName": "bottom",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "backgroundColor",
+                    "nestedName": "backgroundColor",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "borderColor",
+                    "nestedName": "borderColor",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "borderWidth",
+                    "nestedName": "borderWidth",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "borderRadius",
+                    "nestedName": "borderRadius",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "shadowBlur",
+                    "nestedName": "shadowBlur",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "shadowColor",
+                    "nestedName": "shadowColor",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "shadowOffsetX",
+                    "nestedName": "shadowOffsetX",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "shadowOffsetY",
+                    "nestedName": "shadowOffsetY",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                }
+            ]
+        },
+        {
+            "name": "legend",
+            "nestedName": "legend",
+            "type": {
+                "type": "object"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false,
+            "children": [
+                {
+                    "name": "id",
+                    "nestedName": "id",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "show",
+                    "nestedName": "show",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "z",
+                    "nestedName": "z",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "zlevel",
+                    "nestedName": "zlevel",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "left",
+                    "nestedName": "left",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "top",
+                    "nestedName": "top",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "right",
+                    "nestedName": "right",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "bottom",
+                    "nestedName": "bottom",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "width",
+                    "nestedName": "width",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "height",
+                    "nestedName": "height",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "orient",
+                    "nestedName": "orient",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "align",
+                    "nestedName": "align",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "padding",
+                    "nestedName": "padding",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "itemGap",
+                    "nestedName": "itemGap",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "itemWidth",
+                    "nestedName": "itemWidth",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "itemHeight",
+                    "nestedName": "itemHeight",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "symbolKeepAspect",
+                    "nestedName": "symbolKeepAspect",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "formatter",
+                    "nestedName": "formatter",
+                    "type": {
+                        "type": "longText"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "selectedMode",
+                    "nestedName": "selectedMode",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "inactiveColor",
+                    "nestedName": "inactiveColor",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "selected",
+                    "nestedName": "selected",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "textStyle",
+                    "nestedName": "textStyle",
+                    "type": {
+                        "type": "object"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false,
+                    "children": [
+                        {
+                            "name": "color",
+                            "nestedName": "color",
+                            "type": {
+                                "type": "string"
+                            },
+                            "required": false,
+                            "reference": false,
+                            "videos": false
+                        },
+                        {
+                            "name": "fontStyle",
+                            "nestedName": "fontStyle",
+                            "type": {
+                                "type": "string"
+                            },
+                            "required": false,
+                            "reference": false,
+                            "videos": false
+                        },
+                        {
+                            "name": "fontWeight",
+                            "nestedName": "fontWeight",
+                            "type": {
+                                "type": "string | number"
+                            },
+                            "required": false,
+                            "reference": false,
+                            "videos": false
+                        },
+                        {
+                            "name": "fontFamily",
+                            "nestedName": "fontFamily",
+                            "type": {
+                                "type": "string"
+                            },
+                            "required": false,
+                            "reference": false,
+                            "videos": false
+                        },
+                        {
+                            "name": "fontSize",
+                            "nestedName": "fontSize",
+                            "type": {
+                                "type": "number"
+                            },
+                            "required": false,
+                            "reference": false,
+                            "videos": false
+                        },
+                        {
+                            "name": "lineHeight",
+                            "nestedName": "lineHeight",
+                            "type": {
+                                "type": "number"
+                            },
+                            "required": false,
+                            "reference": false,
+                            "videos": false
+                        },
+                        {
+                            "name": "width",
+                            "nestedName": "width",
+                            "type": {
+                                "type": "number"
+                            },
+                            "required": false,
+                            "reference": false,
+                            "videos": false
+                        },
+                        {
+                            "name": "height",
+                            "nestedName": "height",
+                            "type": {
+                                "type": "number"
+                            },
+                            "required": false,
+                            "reference": false,
+                            "videos": false
+                        },
+                        {
+                            "name": "textBorderColor",
+                            "nestedName": "textBorderColor",
+                            "type": {
+                                "type": "string"
+                            },
+                            "required": false,
+                            "reference": false,
+                            "videos": false
+                        },
+                        {
+                            "name": "textBorderWidth",
+                            "nestedName": "textBorderWidth",
+                            "type": {
+                                "type": "number"
+                            },
+                            "required": false,
+                            "reference": false,
+                            "videos": false
+                        },
+                        {
+                            "name": "textShadowColor",
+                            "nestedName": "textShadowColor",
+                            "type": {
+                                "type": "string"
+                            },
+                            "required": false,
+                            "reference": false,
+                            "videos": false
+                        },
+                        {
+                            "name": "textShadowBlur",
+                            "nestedName": "textShadowBlur",
+                            "type": {
+                                "type": "number"
+                            },
+                            "required": false,
+                            "reference": false,
+                            "videos": false
+                        },
+                        {
+                            "name": "textShadowOffsetX",
+                            "nestedName": "textShadowOffsetX",
+                            "type": {
+                                "type": "number"
+                            },
+                            "required": false,
+                            "reference": false,
+                            "videos": false
+                        },
+                        {
+                            "name": "textShadowOffsetY",
+                            "nestedName": "textShadowOffsetY",
+                            "type": {
+                                "type": "number"
+                            },
+                            "required": false,
+                            "reference": false,
+                            "videos": false
+                        },
+                        {
+                            "name": "overflow",
+                            "nestedName": "overflow",
+                            "type": {
+                                "type": "string"
+                            },
+                            "required": false,
+                            "reference": false,
+                            "videos": false
+                        },
+                        {
+                            "name": "ellipsis",
+                            "nestedName": "ellipsis",
+                            "type": {
+                                "type": "string"
+                            },
+                            "required": false,
+                            "reference": false,
+                            "videos": false
+                        }
+                    ]
+                },
+                {
+                    "name": "tooltip",
+                    "nestedName": "tooltip",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "backgroundColor",
+                    "nestedName": "backgroundColor",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "borderColor",
+                    "nestedName": "borderColor",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "borderWidth",
+                    "nestedName": "borderWidth",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "borderRadius",
+                    "nestedName": "borderRadius",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "shadowBlur",
+                    "nestedName": "shadowBlur",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "shadowColor",
+                    "nestedName": "shadowColor",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "shadowOffsetX",
+                    "nestedName": "shadowOffsetX",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "shadowOffsetY",
+                    "nestedName": "shadowOffsetY",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "scrollDataIndex",
+                    "nestedName": "scrollDataIndex",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "pageButtonItemGap",
+                    "nestedName": "pageButtonItemGap",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "pageButtonGap",
+                    "nestedName": "pageButtonGap",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "pageButtonPosition",
+                    "nestedName": "pageButtonPosition",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "pageFormatter",
+                    "nestedName": "pageFormatter",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "pageIcons",
+                    "nestedName": "pageIcons",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "pageIconColor",
+                    "nestedName": "pageIconColor",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "pageIconInactiveColor",
+                    "nestedName": "pageIconInactiveColor",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "pageIconSize",
+                    "nestedName": "pageIconSize",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "pageTextStyle",
+                    "nestedName": "pageTextStyle",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "animation",
+                    "nestedName": "animation",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "animationDurationUpdate",
+                    "nestedName": "animationDurationUpdate",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "selector",
+                    "nestedName": "selector",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "selectorPosition",
+                    "nestedName": "selectorPosition",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "selectorItemGap",
+                    "nestedName": "selectorItemGap",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "selectorButtonGap",
+                    "nestedName": "selectorButtonGap",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "selectorLabel",
+                    "nestedName": "selectorLabel",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "data",
+                    "nestedName": "data",
+                    "type": {
+                        "type": "array"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                }
+            ]
+        },
+        {
+            "name": "grid",
+            "nestedName": "grid",
+            "type": {
+                "type": "object"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false,
+            "children": [
+                {
+                    "name": "id",
+                    "nestedName": "id",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "show",
+                    "nestedName": "show",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "zlevel",
+                    "nestedName": "zlevel",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "z",
+                    "nestedName": "z",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "left",
+                    "nestedName": "left",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "top",
+                    "nestedName": "top",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "right",
+                    "nestedName": "right",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "bottom",
+                    "nestedName": "bottom",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "width",
+                    "nestedName": "width",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "height",
+                    "nestedName": "height",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "containLabel",
+                    "nestedName": "containLabel",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "backgroundColor",
+                    "nestedName": "backgroundColor",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "borderColor",
+                    "nestedName": "borderColor",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "borderWidth",
+                    "nestedName": "borderWidth",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "shadowBlur",
+                    "nestedName": "shadowBlur",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "shadowColor",
+                    "nestedName": "shadowColor",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "shadowOffsetX",
+                    "nestedName": "shadowOffsetX",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "shadowOffsetY",
+                    "nestedName": "shadowOffsetY",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "tooltip",
+                    "nestedName": "tooltip",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                }
+            ]
+        },
+        {
+            "name": "xAxis",
+            "nestedName": "xAxis",
+            "type": {
+                "type": "object"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false,
+            "children": [
+                {
+                    "name": "id",
+                    "nestedName": "id",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "show",
+                    "nestedName": "show",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "type",
+                    "nestedName": "type",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "name",
+                    "nestedName": "name",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "nameLocation",
+                    "nestedName": "nameLocation",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "nameTextStyle",
+                    "nestedName": "nameTextStyle",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "nameGap",
+                    "nestedName": "nameGap",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "nameRotate",
+                    "nestedName": "nameRotate",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "inverse",
+                    "nestedName": "inverse",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "boundaryGap",
+                    "nestedName": "boundaryGap",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "min",
+                    "nestedName": "min",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "max",
+                    "nestedName": "max",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "scale",
+                    "nestedName": "scale",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "splitNumber",
+                    "nestedName": "splitNumber",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "minInterval",
+                    "nestedName": "minInterval",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "maxInterval",
+                    "nestedName": "maxInterval",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "interval",
+                    "nestedName": "interval",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "logBase",
+                    "nestedName": "logBase",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "silent",
+                    "nestedName": "silent",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "triggerEvent",
+                    "nestedName": "triggerEvent",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "axisLine",
+                    "nestedName": "axisLine",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "axisTick",
+                    "nestedName": "axisTick",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "axisLabel",
+                    "nestedName": "axisLabel",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "splitLine",
+                    "nestedName": "splitLine",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "splitArea",
+                    "nestedName": "splitArea",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "data",
+                    "nestedName": "data",
+                    "type": {
+                        "type": "array"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                }
+            ]
+        },
+        {
+            "name": "yAxis",
+            "nestedName": "yAxis",
+            "type": {
+                "type": "object"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false,
+            "children": [
+                {
+                    "name": "id",
+                    "nestedName": "id",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "show",
+                    "nestedName": "show",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "type",
+                    "nestedName": "type",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "name",
+                    "nestedName": "name",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "nameLocation",
+                    "nestedName": "nameLocation",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "nameTextStyle",
+                    "nestedName": "nameTextStyle",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "nameGap",
+                    "nestedName": "nameGap",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "nameRotate",
+                    "nestedName": "nameRotate",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "inverse",
+                    "nestedName": "inverse",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "boundaryGap",
+                    "nestedName": "boundaryGap",
+                    "type": {
+                        "type": "boolean | array"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "min",
+                    "nestedName": "min",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "max",
+                    "nestedName": "max",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "scale",
+                    "nestedName": "scale",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "splitNumber",
+                    "nestedName": "splitNumber",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "minInterval",
+                    "nestedName": "minInterval",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "maxInterval",
+                    "nestedName": "maxInterval",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "interval",
+                    "nestedName": "interval",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "logBase",
+                    "nestedName": "logBase",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "silent",
+                    "nestedName": "silent",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "triggerEvent",
+                    "nestedName": "triggerEvent",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "axisLine",
+                    "nestedName": "axisLine",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "axisTick",
+                    "nestedName": "axisTick",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "axisLabel",
+                    "nestedName": "axisLabel",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "splitLine",
+                    "nestedName": "splitLine",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "splitArea",
+                    "nestedName": "splitArea",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                }
+            ]
+        },
+        {
+            "name": "polar",
+            "nestedName": "polar",
+            "type": {
+                "type": "object"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false,
+            "children": [
+                {
+                    "name": "id",
+                    "nestedName": "id",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "z",
+                    "nestedName": "z",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "center",
+                    "nestedName": "center",
+                    "type": {
+                        "type": "array"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "radius",
+                    "nestedName": "radius",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                }
+            ]
+        },
+        {
+            "name": "radiusAxis",
+            "nestedName": "radiusAxis",
+            "type": {
+                "type": "object"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false,
+            "children": [
+                {
+                    "name": "polarIndex",
+                    "nestedName": "polarIndex",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "type",
+                    "nestedName": "type",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "name",
+                    "nestedName": "name",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "axisLine",
+                    "nestedName": "axisLine",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "axisTick",
+                    "nestedName": "axisTick",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "axisLabel",
+                    "nestedName": "axisLabel",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "splitLine",
+                    "nestedName": "splitLine",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "splitArea",
+                    "nestedName": "splitArea",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "data",
+                    "nestedName": "data",
+                    "type": {
+                        "type": "array"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                }
+            ]
+        },
+        {
+            "name": "angleAxis",
+            "nestedName": "angleAxis",
+            "type": {
+                "type": "object"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false,
+            "children": [
+                {
+                    "name": "polarIndex",
+                    "nestedName": "polarIndex",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "startAngle",
+                    "nestedName": "startAngle",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "clockwise",
+                    "nestedName": "clockwise",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "type",
+                    "nestedName": "type",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "boundaryGap",
+                    "nestedName": "boundaryGap",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "min",
+                    "nestedName": "min",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "max",
+                    "nestedName": "max",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "scale",
+                    "nestedName": "scale",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "splitNumber",
+                    "nestedName": "splitNumber",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "axisLine",
+                    "nestedName": "axisLine",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "axisTick",
+                    "nestedName": "axisTick",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "axisLabel",
+                    "nestedName": "axisLabel",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "splitLine",
+                    "nestedName": "splitLine",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "splitArea",
+                    "nestedName": "splitArea",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "data",
+                    "nestedName": "data",
+                    "type": {
+                        "type": "array"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                }
+            ]
+        },
+        {
+            "name": "radar",
+            "nestedName": "radar",
+            "type": {
+                "type": "object"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false,
+            "children": [
+                {
+                    "name": "id",
+                    "nestedName": "id",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "name",
+                    "nestedName": "name",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "indicator",
+                    "nestedName": "indicator",
+                    "type": {
+                        "type": "array"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "shape",
+                    "nestedName": "shape",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "center",
+                    "nestedName": "center",
+                    "type": {
+                        "type": "array"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "radius",
+                    "nestedName": "radius",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "startAngle",
+                    "nestedName": "startAngle",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "splitNumber",
+                    "nestedName": "splitNumber",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "axisName",
+                    "nestedName": "axisName",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "axisLine",
+                    "nestedName": "axisLine",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "splitLine",
+                    "nestedName": "splitLine",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "splitArea",
+                    "nestedName": "splitArea",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                }
+            ]
+        },
+        {
+            "name": "dataZoom",
+            "nestedName": "dataZoom",
+            "type": {
+                "type": "object"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false,
+            "children": [
+                {
+                    "name": "type",
+                    "nestedName": "type",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "id",
+                    "nestedName": "id",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "xAxisIndex",
+                    "nestedName": "xAxisIndex",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "yAxisIndex",
+                    "nestedName": "yAxisIndex",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "radiusAxisIndex",
+                    "nestedName": "radiusAxisIndex",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "angleAxisIndex",
+                    "nestedName": "angleAxisIndex",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "filterMode",
+                    "nestedName": "filterMode",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "start",
+                    "nestedName": "start",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "end",
+                    "nestedName": "end",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "startValue",
+                    "nestedName": "startValue",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "endValue",
+                    "nestedName": "endValue",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "minSpan",
+                    "nestedName": "minSpan",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "maxSpan",
+                    "nestedName": "maxSpan",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "minValueSpan",
+                    "nestedName": "minValueSpan",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "maxValueSpan",
+                    "nestedName": "maxValueSpan",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "orient",
+                    "nestedName": "orient",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "zoomLock",
+                    "nestedName": "zoomLock",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "throttle",
+                    "nestedName": "throttle",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "rangeMode",
+                    "nestedName": "rangeMode",
+                    "type": {
+                        "type": "array"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                }
+            ]
+        },
+        {
+            "name": "visualMap",
+            "nestedName": "visualMap",
+            "type": {
+                "type": "object"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false,
+            "children": [
+                {
+                    "name": "type",
+                    "nestedName": "type",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "min",
+                    "nestedName": "min",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "max",
+                    "nestedName": "max",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "range",
+                    "nestedName": "range",
+                    "type": {
+                        "type": "array"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "text",
+                    "nestedName": "text",
+                    "type": {
+                        "type": "array"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "textStyle",
+                    "nestedName": "textStyle",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "realtime",
+                    "nestedName": "realtime",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "calculable",
+                    "nestedName": "calculable",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "inverse",
+                    "nestedName": "inverse",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "itemWidth",
+                    "nestedName": "itemWidth",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "itemHeight",
+                    "nestedName": "itemHeight",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "inRange",
+                    "nestedName": "inRange",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "outOfRange",
+                    "nestedName": "outOfRange",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "controller",
+                    "nestedName": "controller",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                }
+            ]
+        },
+        {
+            "name": "tooltip",
+            "nestedName": "tooltip",
+            "type": {
+                "type": "object"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false,
+            "children": [
+                {
+                    "name": "show",
+                    "nestedName": "show",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "trigger",
+                    "nestedName": "trigger",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "axisPointer",
+                    "nestedName": "axisPointer",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "showContent",
+                    "nestedName": "showContent",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "alwaysShowContent",
+                    "nestedName": "alwaysShowContent",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "triggerOn",
+                    "nestedName": "triggerOn",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "showDelay",
+                    "nestedName": "showDelay",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "hideDelay",
+                    "nestedName": "hideDelay",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "enterable",
+                    "nestedName": "enterable",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "confine",
+                    "nestedName": "confine",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "appendToBody",
+                    "nestedName": "appendToBody",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "className",
+                    "nestedName": "className",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "transitionDuration",
+                    "nestedName": "transitionDuration",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "position",
+                    "nestedName": "position",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "formatter",
+                    "nestedName": "formatter",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "valueFormatter",
+                    "nestedName": "valueFormatter",
+                    "type": {
+                        "type": "function"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "backgroundColor",
+                    "nestedName": "backgroundColor",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "borderColor",
+                    "nestedName": "borderColor",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "borderWidth",
+                    "nestedName": "borderWidth",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "padding",
+                    "nestedName": "padding",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "textStyle",
+                    "nestedName": "textStyle",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "extraCssText",
+                    "nestedName": "extraCssText",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "order",
+                    "nestedName": "order",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "renderMode",
+                    "nestedName": "renderMode",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                }
+            ]
+        },
+        {
+            "name": "axisPointer",
+            "nestedName": "axisPointer",
+            "type": {
+                "type": "object"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false,
+            "children": [
+                {
+                    "name": "show",
+                    "nestedName": "show",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "type",
+                    "nestedName": "type",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "link",
+                    "nestedName": "link",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "label",
+                    "nestedName": "label",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "lineStyle",
+                    "nestedName": "lineStyle",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "shadowStyle",
+                    "nestedName": "shadowStyle",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "triggerTooltip",
+                    "nestedName": "triggerTooltip",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "value",
+                    "nestedName": "value",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "status",
+                    "nestedName": "status",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "handle",
+                    "nestedName": "handle",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "z",
+                    "nestedName": "z",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                }
+            ]
+        },
+        {
+            "name": "toolbox",
+            "nestedName": "toolbox",
+            "type": {
+                "type": "object"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false,
+            "children": [
+                {
+                    "name": "id",
+                    "nestedName": "id",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "show",
+                    "nestedName": "show",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "orient",
+                    "nestedName": "orient",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "itemSize",
+                    "nestedName": "itemSize",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "itemGap",
+                    "nestedName": "itemGap",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "showTitle",
+                    "nestedName": "showTitle",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "feature",
+                    "nestedName": "feature",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "iconStyle",
+                    "nestedName": "iconStyle",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "emphasis",
+                    "nestedName": "emphasis",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "z",
+                    "nestedName": "z",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "zlevel",
+                    "nestedName": "zlevel",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "left",
+                    "nestedName": "left",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "top",
+                    "nestedName": "top",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "right",
+                    "nestedName": "right",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "bottom",
+                    "nestedName": "bottom",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "width",
+                    "nestedName": "width",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "height",
+                    "nestedName": "height",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                }
+            ]
+        },
+        {
+            "name": "brush",
+            "nestedName": "brush",
+            "type": {
+                "type": "object"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false,
+            "children": [
+                {
+                    "name": "toolbox",
+                    "nestedName": "toolbox",
+                    "type": {
+                        "type": "array"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "brushLink",
+                    "nestedName": "brushLink",
+                    "type": {
+                        "type": "array"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "seriesIndex",
+                    "nestedName": "seriesIndex",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "geoIndex",
+                    "nestedName": "geoIndex",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "xAxisIndex",
+                    "nestedName": "xAxisIndex",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "yAxisIndex",
+                    "nestedName": "yAxisIndex",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "brushType",
+                    "nestedName": "brushType",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "brushMode",
+                    "nestedName": "brushMode",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "transformable",
+                    "nestedName": "transformable",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "brushStyle",
+                    "nestedName": "brushStyle",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "throttleType",
+                    "nestedName": "throttleType",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "throttleDelay",
+                    "nestedName": "throttleDelay",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "removeOnClick",
+                    "nestedName": "removeOnClick",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "inBrush",
+                    "nestedName": "inBrush",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "outOfBrush",
+                    "nestedName": "outOfBrush",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "z",
+                    "nestedName": "z",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                }
+            ]
+        },
+        {
+            "name": "geo",
+            "nestedName": "geo",
+            "type": {
+                "type": "object"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false,
+            "children": [
+                {
+                    "name": "id",
+                    "nestedName": "id",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "map",
+                    "nestedName": "map",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "roam",
+                    "nestedName": "roam",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "center",
+                    "nestedName": "center",
+                    "type": {
+                        "type": "array"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "aspectScale",
+                    "nestedName": "aspectScale",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "boundingCoords",
+                    "nestedName": "boundingCoords",
+                    "type": {
+                        "type": "array"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "zoom",
+                    "nestedName": "zoom",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "scaleLimit",
+                    "nestedName": "scaleLimit",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "nameMap",
+                    "nestedName": "nameMap",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "selectedMode",
+                    "nestedName": "selectedMode",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "label",
+                    "nestedName": "label",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "itemStyle",
+                    "nestedName": "itemStyle",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "emphasis",
+                    "nestedName": "emphasis",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "select",
+                    "nestedName": "select",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "blur",
+                    "nestedName": "blur",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "z",
+                    "nestedName": "z",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "zlevel",
+                    "nestedName": "zlevel",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "left",
+                    "nestedName": "left",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "top",
+                    "nestedName": "top",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "right",
+                    "nestedName": "right",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "bottom",
+                    "nestedName": "bottom",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                }
+            ]
+        },
+        {
+            "name": "parallel",
+            "nestedName": "parallel",
+            "type": {
+                "type": "object"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false,
+            "children": [
+                {
+                    "name": "id",
+                    "nestedName": "id",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "z",
+                    "nestedName": "z",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "zlevel",
+                    "nestedName": "zlevel",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "left",
+                    "nestedName": "left",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "top",
+                    "nestedName": "top",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "right",
+                    "nestedName": "right",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "bottom",
+                    "nestedName": "bottom",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "width",
+                    "nestedName": "width",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "height",
+                    "nestedName": "height",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "layout",
+                    "nestedName": "layout",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "axisExpandable",
+                    "nestedName": "axisExpandable",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "axisExpandCenter",
+                    "nestedName": "axisExpandCenter",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "axisExpandCount",
+                    "nestedName": "axisExpandCount",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "axisExpandWidth",
+                    "nestedName": "axisExpandWidth",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "axisExpandTriggerOn",
+                    "nestedName": "axisExpandTriggerOn",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "parallelAxisDefault",
+                    "nestedName": "parallelAxisDefault",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                }
+            ]
+        },
+        {
+            "name": "parallelAxis",
+            "nestedName": "parallelAxis",
+            "type": {
+                "type": "object"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false,
+            "children": [
+                {
+                    "name": "id",
+                    "nestedName": "id",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "dim",
+                    "nestedName": "dim",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "parallelIndex",
+                    "nestedName": "parallelIndex",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "realtime",
+                    "nestedName": "realtime",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "areaSelectStyle",
+                    "nestedName": "areaSelectStyle",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "type",
+                    "nestedName": "type",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "name",
+                    "nestedName": "name",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "nameLocation",
+                    "nestedName": "nameLocation",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "nameTextStyle",
+                    "nestedName": "nameTextStyle",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "nameGap",
+                    "nestedName": "nameGap",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "nameRotate",
+                    "nestedName": "nameRotate",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "inverse",
+                    "nestedName": "inverse",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "boundaryGap",
+                    "nestedName": "boundaryGap",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "min",
+                    "nestedName": "min",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "max",
+                    "nestedName": "max",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "scale",
+                    "nestedName": "scale",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "splitNumber",
+                    "nestedName": "splitNumber",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "interval",
+                    "nestedName": "interval",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "logBase",
+                    "nestedName": "logBase",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "axisLine",
+                    "nestedName": "axisLine",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "axisTick",
+                    "nestedName": "axisTick",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "axisLabel",
+                    "nestedName": "axisLabel",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "data",
+                    "nestedName": "data",
+                    "type": {
+                        "type": "array"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                }
+            ]
+        },
+        {
+            "name": "singleAxis",
+            "nestedName": "singleAxis",
+            "type": {
+                "type": "object"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false,
+            "children": [
+                {
+                    "name": "id",
+                    "nestedName": "id",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "type",
+                    "nestedName": "type",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "position",
+                    "nestedName": "position",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "top",
+                    "nestedName": "top",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "bottom",
+                    "nestedName": "bottom",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "left",
+                    "nestedName": "left",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "right",
+                    "nestedName": "right",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "axisTick",
+                    "nestedName": "axisTick",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "axisLabel",
+                    "nestedName": "axisLabel",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "axisLine",
+                    "nestedName": "axisLine",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "splitLine",
+                    "nestedName": "splitLine",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "splitNumber",
+                    "nestedName": "splitNumber",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "boundaryGap",
+                    "nestedName": "boundaryGap",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "scale",
+                    "nestedName": "scale",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "data",
+                    "nestedName": "data",
+                    "type": {
+                        "type": "array"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                }
+            ]
+        },
+        {
+            "name": "timeline",
+            "nestedName": "timeline",
+            "type": {
+                "type": "object"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false,
+            "children": [
+                {
+                    "name": "type",
+                    "nestedName": "type",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "axisType",
+                    "nestedName": "axisType",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "currentIndex",
+                    "nestedName": "currentIndex",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "autoPlay",
+                    "nestedName": "autoPlay",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "rewind",
+                    "nestedName": "rewind",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "loop",
+                    "nestedName": "loop",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "playInterval",
+                    "nestedName": "playInterval",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "controlPosition",
+                    "nestedName": "controlPosition",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "zlevel",
+                    "nestedName": "zlevel",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "z",
+                    "nestedName": "z",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "left",
+                    "nestedName": "left",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "right",
+                    "nestedName": "right",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "top",
+                    "nestedName": "top",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "bottom",
+                    "nestedName": "bottom",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "width",
+                    "nestedName": "width",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "height",
+                    "nestedName": "height",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "data",
+                    "nestedName": "data",
+                    "type": {
+                        "type": "array"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                }
+            ]
+        },
+        {
+            "name": "graphic",
+            "nestedName": "graphic",
+            "type": {
+                "type": "object"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false,
+            "children": [
+                {
+                    "name": "elements",
+                    "nestedName": "elements",
+                    "type": {
+                        "type": "array"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                }
+            ]
+        },
+        {
+            "name": "calendar",
+            "nestedName": "calendar",
+            "type": {
+                "type": "object"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false,
+            "children": [
+                {
+                    "name": "id",
+                    "nestedName": "id",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "zlevel",
+                    "nestedName": "zlevel",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "z",
+                    "nestedName": "z",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "left",
+                    "nestedName": "left",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "top",
+                    "nestedName": "top",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "right",
+                    "nestedName": "right",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "bottom",
+                    "nestedName": "bottom",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "cellSize",
+                    "nestedName": "cellSize",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "orient",
+                    "nestedName": "orient",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "range",
+                    "nestedName": "range",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "dayLabel",
+                    "nestedName": "dayLabel",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "monthLabel",
+                    "nestedName": "monthLabel",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "yearLabel",
+                    "nestedName": "yearLabel",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "splitLine",
+                    "nestedName": "splitLine",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "itemStyle",
+                    "nestedName": "itemStyle",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                }
+            ]
+        },
+        {
+            "name": "dataset",
+            "nestedName": "dataset",
+            "type": {
+                "type": "object"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false,
+            "children": [
+                {
+                    "name": "id",
+                    "nestedName": "id",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "source",
+                    "nestedName": "source",
+                    "type": {
+                        "type": "array"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "dimensions",
+                    "nestedName": "dimensions",
+                    "type": {
+                        "type": "array"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "sourceHeader",
+                    "nestedName": "sourceHeader",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "fromDatasetIndex",
+                    "nestedName": "fromDatasetIndex",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "transform",
+                    "nestedName": "transform",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                }
+            ]
+        },
+        {
+            "name": "aria",
+            "nestedName": "aria",
+            "type": {
+                "type": "object"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false,
+            "children": [
+                {
+                    "name": "enabled",
+                    "nestedName": "enabled",
+                    "type": {
+                        "type": "boolean"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "description",
+                    "nestedName": "description",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "general",
+                    "nestedName": "general",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "series",
+                    "nestedName": "series",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "data",
+                    "nestedName": "data",
+                    "type": {
+                        "type": "json"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                }
+            ]
+        },
+        {
+            "name": "series",
+            "nestedName": "series",
+            "type": {
+                "type": "object"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false,
+            "children": [
+                {
+                    "name": "type",
+                    "nestedName": "type",
+                    "type": {
+                        "type": "array"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                }
+            ]
+        },
+        {
+            "name": "textStyle",
+            "nestedName": "textStyle",
+            "type": {
+                "type": "object"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false,
+            "children": [
+                {
+                    "name": "fontFamily",
+                    "nestedName": "fontFamily",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "fontSize",
+                    "nestedName": "fontSize",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "fontStyle",
+                    "nestedName": "fontStyle",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "fontWeight",
+                    "nestedName": "fontWeight",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "color",
+                    "nestedName": "color",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                }
+            ]
+        },
+        {
+            "name": "darkMode",
+            "nestedName": "darkMode",
+            "type": {
+                "type": "boolean"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false
+        },
+        {
+            "name": "color",
+            "nestedName": "color",
+            "type": {
+                "type": "array"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false
+        },
+        {
+            "name": "backgroundColor",
+            "nestedName": "backgroundColor",
+            "type": {
+                "type": "string"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false
+        },
+        {
+            "name": "animation",
+            "nestedName": "animation",
+            "type": {
+                "type": "boolean"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false
+        },
+        {
+            "name": "animationThreshold",
+            "nestedName": "animationThreshold",
+            "type": {
+                "type": "number"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false
+        },
+        {
+            "name": "animationDuration",
+            "nestedName": "animationDuration",
+            "type": {
+                "type": "number"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false
+        },
+        {
+            "name": "animationEasing",
+            "nestedName": "animationEasing",
+            "type": {
+                "type": "string"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false
+        },
+        {
+            "name": "animationDelay",
+            "nestedName": "animationDelay",
+            "type": {
+                "type": "number"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false
+        },
+        {
+            "name": "animationDurationUpdate",
+            "nestedName": "animationDurationUpdate",
+            "type": {
+                "type": "number"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false
+        },
+        {
+            "name": "animationEasingUpdate",
+            "nestedName": "animationEasingUpdate",
+            "type": {
+                "type": "string"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false
+        },
+        {
+            "name": "animationDelayUpdate",
+            "nestedName": "animationDelayUpdate",
+            "type": {
+                "type": "number"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false
+        },
+        {
+            "name": "stateAnimation",
+            "nestedName": "stateAnimation",
+            "type": {
+                "type": "object"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false,
+            "children": [
+                {
+                    "name": "duration",
+                    "nestedName": "duration",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "easing",
+                    "nestedName": "easing",
+                    "type": {
+                        "type": "string"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                },
+                {
+                    "name": "delay",
+                    "nestedName": "delay",
+                    "type": {
+                        "type": "number"
+                    },
+                    "required": false,
+                    "reference": false,
+                    "videos": false
+                }
+            ]
+        },
+        {
+            "name": "blendMode",
+            "nestedName": "blendMode",
+            "type": {
+                "type": "string"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false
+        },
+        {
+            "name": "hoverLayerThreshold",
+            "nestedName": "hoverLayerThreshold",
+            "type": {
+                "type": "number"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false
+        },
+        {
+            "name": "useUTC",
+            "nestedName": "useUTC",
+            "type": {
+                "type": "boolean"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false
+        },
+        {
+            "name": "options",
+            "nestedName": "options",
+            "type": {
+                "type": "array"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false
+        },
+        {
+            "name": "media",
+            "nestedName": "media",
+            "type": {
+                "type": "array"
+            },
+            "required": false,
+            "reference": false,
+            "videos": false
+        }
+    ],
+    "primaryDb": "TIDB",
+    "piFeatures": {
+        "COHORTS": {
+            "COHORTS": [
+                "TIDB"
+            ]
+        },
+        "CONTEXT": {
+            "CONTEXT": [
+                "TIDB"
+            ]
+        },
+        "BIGQUERY": {
+            "BIGQUERY": [
+                "TIDB"
+            ]
+        }
     },
-    "grid": {
-      "id": "string",
-      "show": "boolean",
-      "zlevel": "number",
-      "z": "number",
-      "left": "string",
-      "top": "string",
-      "right": "string",
-      "bottom": "string",
-      "width": "string",
-      "height": "string",
-      "containLabel": "boolean",
-      "backgroundColor": "string",
-      "borderColor": "string",
-      "borderWidth": "number",
-      "shadowBlur": "number",
-      "shadowColor": "string",
-      "shadowOffsetX": "number",
-      "shadowOffsetY": "number",
-      "tooltip": "json"
+    "oltpFeature": {
+        "queryingFeature": {
+            "TIDB": [
+                {
+                    "active": true
+                }
+            ]
+        }
     },
-    "xAxis": {
-      "id": "string",
-      "show": "boolean",
-      "type": "string",
-      "name": "string",
-      "nameLocation": "string",
-      "nameTextStyle": "json",
-      "nameGap": "number",
-      "nameRotate": "number",
-      "inverse": "boolean",
-      "boundaryGap": "boolean",
-      "min": "string",
-      "max": "string",
-      "scale": "boolean",
-      "splitNumber": "number",
-      "minInterval": "number",
-      "maxInterval": "number",
-      "interval": "number",
-      "logBase": "number",
-      "silent": "boolean",
-      "triggerEvent": "boolean",
-      "axisLine": "json",
-      "axisTick": "json",
-      "axisLabel": "json",
-      "splitLine": "json",
-      "splitArea": "json",
-      "data": "array"
-    },
-    "yAxis": {
-      "id": "string",
-      "show": "boolean",
-      "type": "string",
-      "name": "string",
-      "nameLocation": "string",
-      "nameTextStyle": "json",
-      "nameGap": "number",
-      "nameRotate": "number",
-      "inverse": "boolean",
-      "boundaryGap": "boolean | array",
-      "min": "string",
-      "max": "string",
-      "scale": "boolean",
-      "splitNumber": "number",
-      "minInterval": "number",
-      "maxInterval": "number",
-      "interval": "number",
-      "logBase": "number",
-      "silent": "boolean",
-      "triggerEvent": "boolean",
-      "axisLine": "json",
-      "axisTick": "json",
-      "axisLabel": "json",
-      "splitLine": "json",
-      "splitArea": "json"
-    },
-    "polar": {
-      "id": "string",
-      "z": "number",
-      "center": "array",
-      "radius": "string"
-    },
-    "radiusAxis": {
-      "polarIndex": "number",
-      "type": "string",
-      "name": "string",
-      "axisLine": "json",
-      "axisTick": "json",
-      "axisLabel": "json",
-      "splitLine": "json",
-      "splitArea": "json",
-      "data": "array"
-    },
-    "angleAxis": {
-      "polarIndex": "number",
-      "startAngle": "number",
-      "clockwise": "boolean",
-      "type": "string",
-      "boundaryGap": "boolean",
-      "min": "number",
-      "max": "number",
-      "scale": "boolean",
-      "splitNumber": "number",
-      "axisLine": "json",
-      "axisTick": "json",
-      "axisLabel": "json",
-      "splitLine": "json",
-      "splitArea": "json",
-      "data": "array"
-    },
-    "radar": {
-      "id": "string",
-      "name": "json",
-      "indicator": "array",
-      "shape": "string",
-      "center": "array",
-      "radius": "string",
-      "startAngle": "number",
-      "splitNumber": "number",
-      "axisName": "json",
-      "axisLine": "json",
-      "splitLine": "json",
-      "splitArea": "json"
-    },
-    "dataZoom": {
-      "type": "string",
-      "id": "string",
-      "xAxisIndex": "number",
-      "yAxisIndex": "number",
-      "radiusAxisIndex": "number",
-      "angleAxisIndex": "number",
-      "filterMode": "string",
-      "start": "number",
-      "end": "number",
-      "startValue": "number",
-      "endValue": "number",
-      "minSpan": "number",
-      "maxSpan": "number",
-      "minValueSpan": "number",
-      "maxValueSpan": "number",
-      "orient": "string",
-      "zoomLock": "boolean",
-      "throttle": "number",
-      "rangeMode": "array"
-    },
-    "visualMap": {
-      "type": "string",
-      "min": "number",
-      "max": "number",
-      "range": "array",
-      "text": "array",
-      "textStyle": "json",
-      "realtime": "boolean",
-      "calculable": "boolean",
-      "inverse": "boolean",
-      "itemWidth": "number",
-      "itemHeight": "number",
-      "inRange": "json",
-      "outOfRange": "json",
-      "controller": "json"
-    },
-    "tooltip": {
-      "show": "boolean",
-      "trigger": "string",
-      "axisPointer": "json",
-      "showContent": "boolean",
-      "alwaysShowContent": "boolean",
-      "triggerOn": "string",
-      "showDelay": "number",
-      "hideDelay": "number",
-      "enterable": "boolean",
-      "confine": "boolean",
-      "appendToBody": "boolean",
-      "className": "string",
-      "transitionDuration": "number",
-      "position": "string",
-      "formatter": "string",
-      "valueFormatter": "function",
-      "backgroundColor": "string",
-      "borderColor": "string",
-      "borderWidth": "number",
-      "padding": "number",
-      "textStyle": "json",
-      "extraCssText": "string",
-      "order": "string",
-      "renderMode": "string"
-    },
-    "axisPointer": {
-      "show": "boolean",
-      "type": "string",
-      "link": "json",
-      "label": "json",
-      "lineStyle": "json",
-      "shadowStyle": "json",
-      "triggerTooltip": "boolean",
-      "value": "number",
-      "status": "string",
-      "handle": "json",
-      "z": "number"
-    },
-    "toolbox": {
-      "id": "string",
-      "show": "boolean",
-      "orient": "string",
-      "itemSize": "number",
-      "itemGap": "number",
-      "showTitle": "boolean",
-      "feature": "json",
-      "iconStyle": "json",
-      "emphasis": "json",
-      "z": "number",
-      "zlevel": "number",
-      "left": "string",
-      "top": "string",
-      "right": "string",
-      "bottom": "string",
-      "width": "string",
-      "height": "string"
-    },
-    "brush": {
-      "toolbox": "array",
-      "brushLink": "array",
-      "seriesIndex": "number",
-      "geoIndex": "number",
-      "xAxisIndex": "number",
-      "yAxisIndex": "number",
-      "brushType": "string",
-      "brushMode": "string",
-      "transformable": "boolean",
-      "brushStyle": "json",
-      "throttleType": "string",
-      "throttleDelay": "number",
-      "removeOnClick": "boolean",
-      "inBrush": "json",
-      "outOfBrush": "json",
-      "z": "number"
-    },
-    "geo": {
-      "id": "string",
-      "map": "string",
-      "roam": "boolean",
-      "center": "array",
-      "aspectScale": "number",
-      "boundingCoords": "array",
-      "zoom": "number",
-      "scaleLimit": "json",
-      "nameMap": "json",
-      "selectedMode": "boolean",
-      "label": "json",
-      "itemStyle": "json",
-      "emphasis": "json",
-      "select": "json",
-      "blur": "json",
-      "z": "number",
-      "zlevel": "number",
-      "left": "string",
-      "top": "string",
-      "right": "string",
-      "bottom": "string"
-    },
-    "parallel": {
-      "id": "string",
-      "z": "number",
-      "zlevel": "number",
-      "left": "string",
-      "top": "string",
-      "right": "string",
-      "bottom": "string",
-      "width": "string",
-      "height": "string",
-      "layout": "string",
-      "axisExpandable": "boolean",
-      "axisExpandCenter": "number",
-      "axisExpandCount": "number",
-      "axisExpandWidth": "number",
-      "axisExpandTriggerOn": "string",
-      "parallelAxisDefault": "json"
-    },
-    "parallelAxis": {
-      "id": "string",
-      "dim": "number",
-      "parallelIndex": "number",
-      "realtime": "boolean",
-      "areaSelectStyle": "json",
-      "type": "string",
-      "name": "string",
-      "nameLocation": "string",
-      "nameTextStyle": "json",
-      "nameGap": "number",
-      "nameRotate": "number",
-      "inverse": "boolean",
-      "boundaryGap": "boolean | array",
-      "min": "number",
-      "max": "number",
-      "scale": "boolean",
-      "splitNumber": "number",
-      "interval": "number",
-      "logBase": "number",
-      "axisLine": "json",
-      "axisTick": "json",
-      "axisLabel": "json",
-      "data": "array"
-    },
-    "singleAxis": {
-      "id": "string",
-      "type": "string",
-      "position": "string",
-      "top": "string",
-      "bottom": "string",
-      "left": "string",
-      "right": "string",
-      "axisTick": "json",
-      "axisLabel": "json",
-      "axisLine": "json",
-      "splitLine": "json",
-      "splitNumber": "number",
-      "boundaryGap": "boolean",
-      "scale": "boolean",
-      "data": "array"
-    },
-    "timeline": {
-      "type": "string",
-      "axisType": "string",
-      "currentIndex": "number",
-      "autoPlay": "boolean",
-      "rewind": "boolean",
-      "loop": "boolean",
-      "playInterval": "number",
-      "controlPosition": "string",
-      "zlevel": "number",
-      "z": "number",
-      "left": "string",
-      "right": "string",
-      "top": "string",
-      "bottom": "string",
-      "width": "string",
-      "height": "string",
-      "data": "array"
-    },
-    "graphic": {
-      "elements": "array"
-    },
-    "calendar": {
-      "id": "string",
-      "zlevel": "number",
-      "z": "number",
-      "left": "string",
-      "top": "string",
-      "right": "string",
-      "bottom": "string",
-      "cellSize": "number",
-      "orient": "string",
-      "range": "string",
-      "dayLabel": "json",
-      "monthLabel": "json",
-      "yearLabel": "json",
-      "splitLine": "json",
-      "itemStyle": "json"
-    },
-    "dataset": {
-      "id": "string",
-      "source": "array",
-      "dimensions": "array",
-      "sourceHeader": "boolean",
-      "fromDatasetIndex": "number",
-      "transform": "json"
-    },
-    "aria": {
-      "enabled": "boolean",
-      "description": "string",
-      "general": "json",
-      "series": "json",
-      "data": "json"
-    },
-    "series": {
-      "type": "array"
-    },
-    "textStyle": {
-      "fontFamily": "string",
-      "fontSize": "number",
-      "fontStyle": "string",
-      "fontWeight": "string",
-      "color": "string"
-    },
-    "darkMode": "boolean",
-    "color": "array",
-    "backgroundColor": "string",
-    "animation": "boolean",
-    "animationThreshold": "number",
-    "animationDuration": "number",
-    "animationEasing": "string",
-    "animationDelay": "number",
-    "animationDurationUpdate": "number",
-    "animationEasingUpdate": "string",
-    "animationDelayUpdate": "number",
-    "stateAnimation": {
-      "duration": "number",
-      "easing": "string",
-      "delay": "number"
-    },
-    "blendMode": "string",
-    "hoverLayerThreshold": "number",
-    "useUTC": "boolean",
-    "options": "array",
-    "media": "array"
-  }
+    "execute": "PUBLIC",
+    "visibility": "PUBLIC"
 }
