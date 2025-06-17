@@ -1,5 +1,4 @@
 const axios = require("axios");
-const { figmaPAT } = require("../constant");
 const { pushInstanceToSchema } = require("../services/pi.js");
 
 const getFigmaNodeData = async (fileKey, nodeId, token) => {
@@ -36,7 +35,7 @@ const getData = async (metaData) => {
       const res = await getFigmaNodeData(
         process.env.FIGMA_FILE_KEY,
         child.id,
-        figmaPAT
+        process.env.FIGMA_PAT
       );
       if (!res) continue;
 
@@ -73,7 +72,7 @@ const getData = async (metaData) => {
 const getFigmaFile = async (compId) => {
   try {
     const url = `https://api.figma.com/v1/files/${process.env.FIGMA_FILE_KEY}/nodes?ids=${compId}`;
-    const headers = { "X-Figma-Token": figmaPAT };
+    const headers = { "X-Figma-Token": process.env.FIGMA_PAT };
     const res = await axios.get(url, {
       headers,
     });
@@ -95,13 +94,13 @@ const figmaPayload = async (id) => {
   }
 };
 
-const getSingleData = async (metaData) => {
+const getSingleData = async (id) => {
   const result = [];
 
   const res = await getFigmaNodeData(
     process.env.FIGMA_FILE_KEY,
-    metaData.id,
-    figmaPAT
+    id,
+    process.env.FIGMA_PAT
   );
   if (!res) return;
 
@@ -135,10 +134,8 @@ const getSingleData = async (metaData) => {
 
 const singleInstancePayload = async (id) => {
   try {
-    const metadATA = await getFigmaFile(id);
-    const children = metadATA.nodes[id.replace(/-/g, ":")].document.children;
-    const res = await getSingleData(children);
-    return res;
+    const result = await getSingleData(id);
+    return result;
   } catch (error) {
     console.error("Failed to retrieve Figma payload:", error);
     return null;

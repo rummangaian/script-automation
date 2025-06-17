@@ -20,11 +20,11 @@ const singleInstance = async (req, res) => {
       data: result,
     });
   } catch (error) {
-    console.error("error" , error);
+    console.error("error", error);
     res.status(500).json({
-      msg:"failure",
-      error : "Internal server error"
-    })
+      msg: "failure",
+      error: "Internal server error",
+    });
   }
 };
 
@@ -47,4 +47,4 @@ const getFigmaData = async (req, res) => {
     });
   }
 };
-module.exports = { formPayload, getFigmaData , singleInstance};
+module.exports = { formPayload, getFigmaData, singleInstance };
