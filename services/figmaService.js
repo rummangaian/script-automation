@@ -3,7 +3,7 @@ const { figmaPAT } = require("../constant");
 const { pushInstanceToSchema } = require("../services/pi.js");
 
 const getFigmaNodeData = async (fileKey, nodeId, token) => {
-  console.log(fileKey , nodeId , token)
+  console.log(fileKey, nodeId, token);
   try {
     const response = await axios.get(
       `https://api.figma.com/v1/files/${fileKey}/nodes`,
@@ -66,7 +66,7 @@ const getData = async (metaData) => {
       result.push(nodeId);
     }
   }
-  
+
   return result;
 };
 
@@ -95,4 +95,54 @@ const figmaPayload = async (id) => {
   }
 };
 
-module.exports = { figmaPayload , getFigmaNodeData};
+const getSingleData = async (metaData) => {
+  const result = [];
+
+  const res = await getFigmaNodeData(
+    process.env.FIGMA_FILE_KEY,
+    metaData.id,
+    figmaPAT
+  );
+  if (!res) return;
+
+  const nodeId = Object.keys(res.nodes)[0];
+  const payload = {
+    id: nodeId,
+    name: res.nodes[nodeId].document.name,
+    lastModified: res.lastModified,
+    thumbnailUrl: res.thumbnailUrl,
+    role: res.role,
+    editorType: res.editorType,
+    linkAccess: res.linkAccess,
+    document: res.nodes[nodeId].document,
+    components: res.nodes[nodeId].components,
+    componentSets: res.nodes[nodeId].componentSets,
+    schemaVersion: {
+      version: res.nodes[nodeId].schemaVersion,
+    },
+    styles: res.nodes[nodeId].styles,
+  };
+
+  const response = await pushInstanceToSchema(
+    process.env.FIGMA_SCHEMA_ID,
+    payload
+  );
+  console.log(response.msg, " instance pushed for ", nodeId);
+  result.push(nodeId);
+
+  return result;
+};
+
+const singleInstancePayload = async (id) => {
+  try {
+    const metadATA = await getFigmaFile(id);
+    const children = metadATA.nodes[id.replace(/-/g, ":")].document.children;
+    const res = await getSingleData(children);
+    return res;
+  } catch (error) {
+    console.error("Failed to retrieve Figma payload:", error);
+    return null;
+  }
+};
+
+module.exports = { figmaPayload, getFigmaNodeData, singleInstancePayload };
