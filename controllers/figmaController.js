@@ -1,5 +1,5 @@
 const figmaService = require("../services/figmaService");
-require("dotenv").config()
+require("dotenv").config();
 
 const formPayload = async (req, res) => {
   try {
@@ -11,20 +11,40 @@ const formPayload = async (req, res) => {
     res.status(500).json({ error: "Internal server error" });
   }
 };
-
-const getFigmaData = async (req , res) => {
+const singleInstance = async (req, res) => {
   try {
-    const {id , fileKey} = req.query;
-    const result = await figmaService.getFigmaNodeData(fileKey , id , process.env.FIGMA_PAT);
+    const { id } = req.body;
+    const result = await figmaService.singleInstancePayload(id);
     res.status(200).json({
-      message:"Success",
-      data : result
+      msg: "Success",
+      data: result,
+    });
+  } catch (error) {
+    console.error("error" , error);
+    res.status(500).json({
+      msg:"failure",
+      error : "Internal server error"
     })
+  }
+};
+
+const getFigmaData = async (req, res) => {
+  try {
+    const { id, fileKey } = req.query;
+    const result = await figmaService.getFigmaNodeData(
+      fileKey,
+      id,
+      process.env.FIGMA_PAT
+    );
+    res.status(200).json({
+      message: "Success",
+      data: result,
+    });
   } catch (error) {
     console.error("error", error);
     res.status(500).json({
-      error : "Internal Server Error"
-    })
+      error: "Internal Server Error",
+    });
   }
-}
-module.exports = {formPayload , getFigmaData}
+};
+module.exports = { formPayload, getFigmaData , singleInstance};
