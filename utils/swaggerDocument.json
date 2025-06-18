@@ -1,0 +1,102 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Script Automation API",
+    "version": "1.0.0",
+    "description": "API documentation for Script Automation Figma services"
+  },
+  "servers": [
+    {
+      "url": "https://script-automation.onrender.com",
+      "description": "Production Server"
+    }
+  ],
+  "paths": {
+    "/api/figma/figma-data": {
+      "get": {
+        "tags": ["Figma Service"],
+        "summary": "Get Figma Data by ID and fileKey",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "string" },
+            "description": "The ID of the Figma node"
+          },
+          {
+            "name": "fileKey",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "string" },
+            "description": "The key of the Figma file"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          },
+          "400": {
+            "description": "Invalid request"
+          }
+        }
+      }
+    },
+    "/api/figma/push-parent-figma-data": {
+      "post": {
+        "tags": ["Figma Service"],
+        "summary": "Push Parent Figma Data by ID",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": { "type": "string" }
+                },
+                "required": ["id"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Parent Figma data pushed successfully"
+          },
+          "400": {
+            "description": "Bad request"
+          }
+        }
+      }
+    },
+    "/api/figma/push-single-node-data": {
+      "post": {
+        "tags": ["Figma Service"],
+        "summary": "Push Single Node Figma Data by ID",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": { "type": "string" }
+                },
+                "required": ["id"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Single node data pushed successfully"
+          },
+          "400": {
+            "description": "Bad request"
+          }
+        }
+      }
+    }
+  }
+}
