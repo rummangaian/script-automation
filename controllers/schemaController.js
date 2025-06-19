@@ -1,6 +1,6 @@
 const axiosInstance = require('../config/axiosInstance');
 const generateSchemaPayload = require('../utils/generateSchemaPayload');
-const createPayload = require("../utils/attributePayload")
+const {createPayload , updateSchemaDefAuto} = require("../utils/attributePayload")
 
 let schemaStore = {};
 
@@ -50,4 +50,10 @@ exports.createSchemaPayload = async (req , res) => {
   const attributeJson = req.body;
   const schemaPayload = createPayload(universeID ,attributeJson)
   res.status(200).json(schemaPayload)
+}
+
+exports.updateSchemaDefinitionAuto = async (req , res) => {
+  const {schemaId} = req.query;
+  const response = await updateSchemaDefAuto(schemaId)
+  res.status(200).json({response})
 }
