@@ -1,0 +1,45 @@
+{
+        "universes": [
+            "66e2f144902a0633d63e2a9d"
+        ],
+        "name": "Service Maintenance Load by Equipment and Staff",
+        "description": "Service Maintenance Load by Equipment and Staff",
+        "schemaIds": [
+            "6707cf77f6719a0a4db18bb5"
+        ],
+        "bqRawQueryDefinition": {
+            "sourceDb": "TIDB",
+            "rawQuery": "SELECT ghs.`entity.service_type` AS `service_type`, SUM(ghs.`entity.equipment_count`) AS `total_equipment`, SUM(ghs.`entity.staff_count`) AS total_staff FROM t_6707cf77f6719a0a4db18bb5_t ghs GROUP BY ghs.`entity.service_type`;",
+            "destinationDb": [
+                "TIDB"
+            ]
+        },
+        "queryType": "ONE_TIME",
+        "dataStoreType": "APPEND",
+        "additionalMetadata": {},
+        "visibility": "PRIVATE",
+        "dataReadAccess": "PUBLIC",
+        "dataWriteAccess": "PUBLIC",
+        "metadataReadAccess": "PUBLIC",
+        "metadataWriteAccess": "PUBLIC",
+        "execute": "ORGANIZATION",
+        "isUsedForGroups": false,
+        "placeHolders": [],
+        "tags": {
+            "RED": [
+                "HEAD",
+                "DEAD"
+            ]
+        },
+        "resultantDataType": {
+            "total_equipment": {
+                "type": "DOUBLE"
+            },
+            "entity.service_type": {
+                "type": "VARCHAR"
+            },
+            "total_staff": {
+                "type": "DOUBLE"
+            }
+        }
+    }

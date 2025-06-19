@@ -43,6 +43,7 @@ const getEntities = async (
         },
       }
     );
+    // console.log("res.data" , res.data)
     return res.data;
   } catch (e) {
     return false;
@@ -131,13 +132,13 @@ const getEntities = async (
   }
 }
 
-async function pushInstanceToSchema(schemaId, payload) {
+async function pushInstanceToSchema(schemaId, payload , token = token) {
   const url = `https://ig.gov-cloud.ai/pi-entity-instances-service/v2.0/schemas/${schemaId}/instances`;
 
   try {
     const response = await axios.post(
       url,
-      { data: [payload] },
+      { data: payload },
       {
         headers: {
           'Content-Type': 'application/json',
@@ -154,4 +155,4 @@ async function pushInstanceToSchema(schemaId, payload) {
   }
 }
 
-module.exports = {pushInstanceToSchema}
+module.exports = {pushInstanceToSchema , getSchemaDetails , getAdhocVAlue , getBQData , getAdhocVAlue , getEntities , createDataverse}

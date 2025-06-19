@@ -1,4 +1,5 @@
 const figmaService = require("../services/figmaService");
+const redisClient = require("../services/redisClient");
 require("dotenv").config();
 
 const formPayload = async (req, res) => {
@@ -31,6 +32,15 @@ const singleInstance = async (req, res) => {
 const getFigmaData = async (req, res) => {
   try {
     const { id, fileKey } = req.query;
+    const cacheKey = `figma:${fileKey}:${id}`
+
+    const cachedData = await redisClient.get(cacheKey);
+    if(cachedData){
+      return res.status(200).json({
+      message: "Success ,data from redis",
+      data: result,
+    });
+    }
     const result = await figmaService.getFigmaNodeData(
       fileKey,
       id,
