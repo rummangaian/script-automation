@@ -22,7 +22,7 @@ const refactorBq = async (req , res) => {
     try {
         const result = await transformService.payloadFromConstructId(bqId);
         res.status(200).json({
-            result
+            ...result
         })
     } catch (error) {
         
@@ -41,4 +41,18 @@ const flattenCols = async(req , res) => {
     }
 }
 
-module.exports = {transformBQ , refactorBq , flattenCols};
+const refactorAdhoc = async(req , res) => {
+    const {list} = req.body;
+    try {
+        const result = await transformService.refactorAdhocService(list);
+        res.status(200).json({
+            result
+        })
+    } catch (error) {
+        
+    }
+}
+
+
+
+module.exports = {transformBQ , refactorBq , flattenCols , refactorAdhoc};

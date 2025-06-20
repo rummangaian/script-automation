@@ -82,7 +82,7 @@ const getEntities = async (
   }
 }
 
- async function getAdhocVAlue(querry) {
+ async function getAdhocVAlue(querry , token=accessToken) {
   try {
     var res = await axios.post(
       "https://ig.gov-cloud.ai/pi-cohorts-service/v1.0/cohorts/adhoc",
@@ -90,12 +90,31 @@ const getEntities = async (
       {
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${accessToken}`,
+          Authorization: `Bearer ${token}`,
         },
       }
     );
     return res.data;
   } catch (e) {
+    return false;
+  }
+}
+
+ async function verifyAdhoc(querry , token=accessToken) {
+  try {
+    var res = await axios.post(
+      "https://ig.gov-cloud.ai/pi-cohorts-service-dbaas/v1.0/cohorts/adhoc",
+      { definition: querry, type: "TIDB" },
+      {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+    return true;
+  } catch (e) {
+    console.log(e.response)
     return false;
   }
 }
@@ -155,4 +174,21 @@ async function pushInstanceToSchema(schemaId, payload , token = token) {
   }
 }
 
-module.exports = {pushInstanceToSchema , getSchemaDetails , getAdhocVAlue , getBQData , getAdhocVAlue , getEntities , createDataverse}
+const createBQ = async (payload , token = accessToken ) => {
+  console.log("first" , payload)
+  const url = 'https://ig.gov-cloud.ai/pi-bigquery-service-dbaas/v1.0/big-queries';
+  try {
+    const response = await axios.post(url , payload , {
+      headers :{
+        'Content-Type' : 'application/json',
+        'Authorization':`Bearer ${token}`
+      }
+    })
+    return response.data
+  } catch (error) {
+    console.log(error?.response?.data)
+    return error?.response?.data
+  }
+} 
+
+module.exports = {pushInstanceToSchema , getSchemaDetails , getAdhocVAlue , getBQData , getAdhocVAlue , getEntities , createDataverse , verifyAdhoc , createBQ}
