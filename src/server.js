@@ -1,7 +1,5 @@
 require('dotenv').config();
 const express = require('express');
-const http = require('http');
-const {Server} = require('socket.io');
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('../utils/swaggerDocument.json')
 
@@ -10,13 +8,8 @@ const figmaRoutes = require('../routes/figmaRoutes');
 const migrationRoutes = require('../routes/migrationRoutes.js');
 const tranformBqRoutes = require('../routes/transformBQRoutes.js')
 
-const serverConfig = require('../config/serverConfig.js')
-
 const app = express();
 app.use(express.json());
-
-const server = http.createServer(app);
-const io = new Server(server)
 
 app.use('/api-docs' , swaggerUi.serve , swaggerUi.setup(swaggerDocument))
 app.use('/api/schemas', schemaRoutes);
