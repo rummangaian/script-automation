@@ -1,5 +1,6 @@
 const { default: axios } = require("axios");
-const { ddqToken, constructToken, renameToken } = require("../constant");
+const { ddqToken, constructToken, renameToken, token } = require("../constant");
+const { verifyAdhoc, createBQ } = require("./pi");
 
 const listEntityInstances = async (
   schemaId,
@@ -96,14 +97,35 @@ function buildPayloadFromMetadata(metadata) {
   const definition = item.definition;
 
   // Construct resultantDataType from metadata.columns
-  const resultantDataType = {};
-  if (item.metadata && item.metadata.columns) {
-    item.metadata.columns.forEach((col) => {
-      resultantDataType[col.name] = {
-        type: col.type,
-      };
-    });
-  }
+const resultantDataType = {};
+if (item.metadata && item.metadata.columns) {
+  item.metadata.columns.forEach((col) => {
+    let finalType;
+    const type = col.type.toUpperCase();
+
+    if (type.includes("VARCHAR")) {
+      finalType = "String";
+    } else if (type.includes("BIGINT") || type.includes("INT") || type.includes("DECIMAL")) {
+      finalType = "Number";
+    } else if (type.includes("DOUBLE")) {
+      finalType = "Double";
+    } else if (type.includes("FLOAT")) {
+      finalType = "Float";
+    } else if (type.includes("BOOLEAN")) {
+      finalType = "Boolean";
+    } else {
+      finalType = col.type; // preserve original if no match
+    }
+
+    // Remove `entity.` prefix from the name if present
+    const cleanName = col.name.startsWith("entity.") ? col.name.replace("entity.", "") : col.name;
+
+    resultantDataType[cleanName] = {
+        "type":finalType
+    };
+  });
+}
+
 
   const payload = {
     universes: definition.universes || [],
@@ -112,10 +134,10 @@ function buildPayloadFromMetadata(metadata) {
     schemaIds: definition.aqDefinitionRequest.tables || [],
     bqRawQueryDefinition: {
       sourceDb: item.type,
-      rawQuery: definition.definition,
+      rawQuery: definition.definition.replace(/`entity\.(.*?)`/g, "`$1`"),
       destinationDb: [item.type],
     },
-    queryType: definition.type,
+    queryType: "ONE_TIME",
     dataStoreType: definition.dataStoreType,
     additionalMetadata: definition.additionalMetadata || {},
     visibility: item.visibility,
@@ -193,8 +215,21 @@ const payloadFromConstructId = async (bqId) => {
   try {
     const content = await fetchBigQueryMetadataUnique(bqId);
     const payload = buildPayloadFromMetadata(content);
+    const querry = payload?.bqRawQueryDefinition?.rawQuery
+    const adhocSuccess = await verifyAdhoc(querry , token)
+    if(adhocSuccess){
+        const createdBQ = await createBQ(payload , token);
+        return {
+        adhocSuccess,
+        createdBQ ,
+        payload
+    }
+    }
     // const bq = await createBqHelper(payload)
-    return payload;
+    return {
+        adhocSuccess,
+        payload 
+    };
   } catch (error) {
     return error;
   }
@@ -217,10 +252,9 @@ const flattenAPIexecute = async (body) => {
     );
     throw error;
   }
-
 };
 
-const flattenPayload =async (schemaId, instance) => {
+const flattenPayload = async (schemaId, instance) => {
   const res = [];
   for (const [key, value] of Object.entries(instance)) {
     const obj = {
@@ -229,10 +263,10 @@ const flattenPayload =async (schemaId, instance) => {
       newColumnName: key,
     };
     res.push(obj);
-    console.log(obj)
-    const response = await flattenAPIexecute(obj)
-    console.log(response)
-    res.push(response)
+    console.log(obj);
+    const response = await flattenAPIexecute(obj);
+    console.log(response);
+    res.push(response);
   }
   return res;
 };
@@ -244,14 +278,36 @@ const flattenSchemaCols = async (schemaIds) => {
     const instance = res[0];
     if (instance.entity !== undefined) {
       const res = flattenPayload(schemaIds[i], instance.entity);
-      result.push(instance);
     }
+    result.push(instance);
   }
   return result;
 };
+
+const refactorAdhocService = (list) => {
+    const sucessResult = [];
+    const failureResult = [];
+    for (let i = 0; i < list.length; i++) {
+        const adhoc = list[i].Bq.replace(/`entity\.(.*?)`/g, "`$1`");
+
+        const adhocSuccess = verifyAdhoc(adhoc , token);
+        if(adhocSuccess){
+            const data = list[i]
+            data.Bq = adhoc
+            sucessResult.push(data)
+        }
+        else{
+            failureResult.push(list[i])
+        }
+    }
+    return {
+        sucessResult , failureResult
+    }
+}
 
 module.exports = {
   transformBQService,
   payloadFromConstructId,
   flattenSchemaCols,
+  refactorAdhocService
 };
